@@ -76,6 +76,17 @@ public class AuthContainer implements AuthResolver {
     public String getCurrentAccessToken() {
         return this.getContainer().persistentStore.accessToken;
     }
+    
+    /**
+     * Gets current access token
+     *
+     * @return the current access token
+     */
+    public void setCurrentAccessToken(String accessToken) {
+        Container container = this.getContainer();        
+        container.persistentStore.accessToken = accessToken;
+        container.persistentStore.save();
+    }
 
     /**
      * Sign up with auth data.
