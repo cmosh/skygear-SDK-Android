@@ -78,9 +78,9 @@ public class AuthContainer implements AuthResolver {
     }
     
     /**
-     * Gets current access token
-     *
-     * @return the current access token
+     * Sets current access token
+     * 
+     * @param accessToken user's access token
      */
     public void setCurrentAccessToken(String accessToken) {
         Container container = this.getContainer();        
